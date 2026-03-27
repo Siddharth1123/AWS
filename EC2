@@ -1,0 +1,75 @@
+EC2 instance = CPU (brain)
+Volume = Hard disk (storage)
+
+Example (Real-life analogy)
+
+Imagine:
+  You buy a laptop (EC2 instance)
+  It comes with 100GB SSD (volume)
+Later:
+  You add another 500GB external drive → new volume
+
+Types of Storage in EC2:
+1. EBS (Persistent)
+  Safe storage
+  Most used
+
+2. Instance Store (Temporary)
+  Data lost when instance stops
+  Very fast
+  Used for caching
+
+Volume Types:
+1- gp3 
+Default & best for most cases
+Balanced cost + performance
+
+You can control:
+IOPS (speed of operations)
+Throughput (data transfer speed)
+
+Use for:
+Web apps
+Small-medium databases
+General workloads
+
+gp2 (Older version)
+Auto scales performance with size
+Less flexible than gp3
+
+High Performance SSD
+io1 / io2 (Provisioned IOPS)
+
+Very high performance
+-  You define exact IOPS
+Use for:
+
+-  Critical databases (MySQL, Oracle)
+-  Financial systems
+Note : io2 is newer and more durable than io1
+
+HDD (Cheap storage)
+-  st1 (Throughput Optimized HDD)
+  Good for large data streaming
+High throughput, lower IOPS
+Use for:
+-  Big data
+-  Logs processing
+
+sc1 (Cold HDD)
+-  Cheapest option
+Very low performance
+
+Use for:
+-  Backups
+-  Rarely accessed data
+
+What is Throughput? Throughput = How much data can be transferred per second. (Megabytes per second)
+IOPS = how many packets you can send
+Throughput = how big each packet is
+Example:
+
+1000 small files → IOPS matters
+1 big video file → Throughput matters
+
+
